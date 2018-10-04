@@ -1,5 +1,5 @@
 const resolvers = require('./resolvers')
-const { makeExecutableSchema} = require('graphql-tools')
+const { makeExecutableSchema } = require('graphql-tools')
 
 const usersAttribs = `
     id: ID
@@ -14,7 +14,7 @@ const typeDefs = `
     }
 
     type Query {
-        getUser{id: ID!}: User
+        getUser(id: ID!): User
         getUsers: [User]
     }
 
@@ -25,7 +25,6 @@ const typeDefs = `
     type Mutation {
         createUser(input: UserInput): User
     }
-
 `
 module.exports = makeExecutableSchema({ 
     typeDefs, 

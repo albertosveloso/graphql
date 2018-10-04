@@ -12,4 +12,4 @@ module.exports = knex
 
 // knex('users').first().then(resultado => console.log(resultado))
 
-knex('users').where({id: 3}).first().then(resultado => console.log(resultado))
+//knex('users').where({id: 3}).first().then(resultado => console.log(resultado))
